@@ -23,8 +23,8 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        goversion: '1.16'
+        goversion: "1.16"
         project_path: "./"
         binary_name: "postfix_exporter"
         extra_files: LICENSE README.md
-        build_command: 'go build -tags nosystemd'
+        build_flags: " -tags nosystemd"
